@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube Music Controller</title>
+    <style>
+        body {
+          width: 300px;
+          height: 200px;
+          padding: 10px;
+          background-color: #2d3748;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          background-color: #2d3748;
+        }
+        .header {
+          font-size: 1.2rem;
+          color: #fff;
+          font-weight: 500;
+          color: #ed8936;
+        }
+        .text {
+          font-size: 1rem;
+          color: #ed8936;
+          font-weight: 400;
+        }
+        image{
+          width: 100px;
+          height: 100px;
+        }
+        .time {
+          font-size: 1.25rem;
+          color: #fff;
+          font-weight: 500;
+        }
+      </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="header">Currently playing:</h1>
+        <p class="text" id="song"></p>
+        <p class="text" id="artist"></p>
+        <p class="text" id="albumName"></p>
+        <img id="albumCover" src="" alt="Album cover" />
+        <p class="time" id="time"></p>
+      </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

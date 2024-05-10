@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube Music Controller",
+    "version": "1.0",
+    "description": "Gets information from YT Music.",
+    "permissions": ["activeTab"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/left.svg",
+            "48": "images/play.svg",
+            "128": "images/right.svg"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "*://music.youtube.com/*" ],
+            "js": [ "content.js" ],
+            "all_frames": false,
+            "run_at": "document_start"
+        }
+    ]
+}
